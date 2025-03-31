@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPFS Image Storage</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h1>IPFS Image Storage</h1>
+    
+    <div class="panel user-panel">
+        <h2>User Panel</h2>
+        <input type="file" id="imageInput">
+        <button onclick="uploadImage()">Upload Image</button>
+        <input type="text" id="imageCID" placeholder="Enter IPFS CID">
+        <button onclick="fetchImage()">Fetch Image</button>
+        <button onclick="deleteImage()">Delete Image</button>
+        <p id="userMessage"></p>
+        <div id="imagePreview"></div>
+    </div>
+    
+    <div class="panel admin-panel">
+        <h2>Admin Panel</h2>
+        <input type="text" id="adminCID" placeholder="Enter IPFS CID">
+        <button onclick="adminFetchImage()">Fetch Image</button>
+        <p id="adminMessage"></p>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
